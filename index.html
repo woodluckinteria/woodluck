@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drewniana Szopa - Rekwizyty Fotograficzne</title>
+    
+    <!-- Pobieranie nowoczesnego fontu Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Pobieranie biblioteki Tailwind CSS dla natychmiastowego nowoczesnego wyglądu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfiguracja czcionek dla Tailwinda -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-wood': '#8B5A2B',
+                        'brand-light': '#FAF9F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased">
+
+    <!-- SEKCJA HERO (NAGŁÓWEK) -->
+    <header class="relative bg-white overflow-hidden border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="text-center">
+                <p class="text-sm font-semibold tracking-wide text-brand-wood uppercase mb-2">Drewniana Szopa</p>
+                <h1 class="text-4xl lg:text-6xl font-serif font-bold text-gray-900 mb-6">
+                    Naturalne rekwizyty do<br>sesji noworodkowych.
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg text-gray-500 mx-auto font-light">
+                    Ręcznie tworzone misy, skrzyneczki i sanki z prawdziwego drewna. Bezpieczne, szlifowane i unikalne – stworzone, by nadać Twoim zdjęciom niezwykły klimat.
+                </p>
+                <div class="mt-10">
+                    <a href="#sklep" class="inline-block bg-gray-900 text-white font-medium px-8 py-4 rounded-md hover:bg-gray-800 transition duration-300">
+                        Zobacz kolekcję
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEKCJA ZALET (SOCIAL PROOF / CECHY) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="p-4">
+                    <h3 class="font-serif font-semibold text-xl text-gray-900">100% Drewno</h3>
+                    <p class="mt-2 text-gray-500 text-sm">Pracujemy tylko na naturalnych surowcach.</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-serif font-semibold text-xl text-gray-900">Bezpieczeństwo</h3>
+                    <p class="mt-2 text-gray-500 text-sm">Gładko szlifowane krawędzie, idealne dla delikatnej skóry niemowląt.</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-serif font-semibold text-xl text-gray-900">Rękodzieło</h3>
+                    <p class="mt-2 text-gray-500 text-sm">Każdy egzemplarz jest unikalny i robiony ręcznie w Polsce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA SKLEPU (PRODUKTY) -->
+    <section id="sklep" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-12">Dostępne rekwizyty</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- PRODUKT 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <!-- Zastąp URL prawdziwym zdjęciem swojej misy -->
+                    <img src="https://images.unsplash.com/photo-1615526675159-e248c3021d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Drewniana Misa" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-semibold text-gray-900">Rustykalna Misa Drewniana</h3>
+                        <p class="mt-2 text-gray-500 text-sm h-12">Idealna do owijek noworodkowych. Średnica 40cm.</p>
+                        <p class="mt-4 text-2xl font-semibold text-gray-900 mb-6">150 zł</p>
+                        
+                        <!-- PRZYCISK ZAKUPU -->
+                        <!-- Zamiast funkcji 'zamowMailowo()', docelowo wklejasz tu prosty link do Stripe: href="https://buy.stripe.com/twoj_link" -->
+                        <button onclick="zamowMailowo('Rustykalna Misa Drewniana', '150')" class="w-full bg-gray-900 text-white py-3 rounded hover:bg-gray-800 transition">
+                            Kup teraz
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUKT 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1582299863483-c4be9094ae3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Skrzyneczka Retro" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-semibold text-gray-900">Skrzyneczka Retro</h3>
+                        <p class="mt-2 text-gray-500 text-sm h-12">Postarzane drewno, świetna do pozycji siedzących. 30x25cm.</p>
+                        <p class="mt-4 text-2xl font-semibold text-gray-900 mb-6">120 zł</p>
+                        <button onclick="zamowMailowo('Skrzyneczka Retro', '120')" class="w-full bg-gray-900 text-white py-3 rounded hover:bg-gray-800 transition">
+                            Kup teraz
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUKT 3 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1543831862-5bdc1c73ebcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Drewniane Sanki" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-semibold text-gray-900">Zimowe Sanki Vintage</h3>
+                        <p class="mt-2 text-gray-500 text-sm h-12">Solidne sanki idealne do sesji świątecznych.</p>
+                        <p class="mt-4 text-2xl font-semibold text-gray-900 mb-6">180 zł</p>
+                        <button onclick="zamowMailowo('Zimowe Sanki Vintage', '180')" class="w-full bg-gray-900 text-white py-3 rounded hover:bg-gray-800 transition">
+                            Kup teraz
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-8 border-t border-gray-200 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Drewniana Szopa. Tworzone z pasją z drewna.</p>
+    </footer>
+
+    <!-- SKRYPT OBSŁUGUJĄCY PROSTE ZAMÓWIENIA (Zanim podepniesz Stripe) -->
+    <script>
+        function zamowMailowo(nazwaProduktu, cena) {
+            // Zamień na swój własny adres e-mail
+            const twojEmail = "kontakt@twojadomena.pl"; 
+            const temat = encodeURIComponent("Zamówienie: " + nazwaProduktu);
+            const tresc = encodeURIComponent(
+                "Dzień dobry,\n\n" +
+                "Chciał(a)bym zamówić:\n" +
+                "- Produkt: " + nazwaProduktu + "\n" +
+                "- Cena: " + cena + " zł\n\n" +
+                "Proszę o informację zwrotną dotyczącą danych do przelewu i kosztów wysyłki.\n\n" +
+                "Pozdrawiam,"
+            );
+            // Otwiera domyślnego klienta poczty na telefonie/komputerze z wypełnionymi danymi
+            window.location.href = "mailto:" + twojEmail + "?subject=" + temat + "&body=" + tresc;
+        }
+    </script>
+</body>
+</html>
